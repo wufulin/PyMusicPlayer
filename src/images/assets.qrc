@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="logo">
+    <file>logo.png</file>
+  </qresource>
+  <qresource prefix="background">
+    <file>footerBg.jpg</file>
+    <file>background.jpg</file>
+  </qresource>
+  <qresource prefix="button">
+    <file>btnShuffle.jpg</file>
+    <file>btnRepeat.jpg</file>
+    <file>btnReset.jpg</file>
+    <file>btnStart.jpg</file>
+    <file>btnRewind.jpg</file>
+    <file>btnStop.jpg</file>
+    <file>btnForward.jpg</file>
+    <file alias="close">btnClose.jpg</file>
+    <file>title.jpg</file>
+  </qresource>
+</RCC>
