@@ -7,6 +7,8 @@
     <file>background.jpg</file>
   </qresource>
   <qresource prefix="button">
+    <file>btnDel.jpg</file>
+    <file>btnAdd.jpg</file>
     <file>btnShuffle.jpg</file>
     <file>btnRepeat.jpg</file>
     <file>btnReset.jpg</file>

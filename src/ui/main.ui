@@ -111,7 +111,7 @@
      <string notr="true">background:url(:/logo/logo.png)</string>
     </property>
    </widget>
-   <widget class="QLabel" name="name">
+   <widget class="QLabel" name="labelName">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -122,7 +122,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>9</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -319,10 +319,10 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnRewind">
+   <widget class="QPushButton" name="btnPrev">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>153</x>
       <y>70</y>
       <width>20</width>
       <height>15</height>
@@ -332,24 +332,24 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#btnRewind {border:none;background: url(:/button/btnRewind.jpg);}
+     <string notr="true">QPushButton#btnPrev {border:none;background: url(:/button/btnRewind.jpg);}
 </string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnForward">
+   <widget class="QPushButton" name="btnNext">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>238</x>
       <y>70</y>
       <width>20</width>
       <height>15</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#btnForward {border:none;background: url(:/button/btnForward.jpg);}</string>
+     <string notr="true">QPushButton#btnNext {border:none;background: url(:/button/btnForward.jpg);}</string>
     </property>
     <property name="text">
      <string/>
@@ -371,7 +371,33 @@
      <string/>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider">
+   <widget class="QLabel" name="consumeTime">
+    <property name="geometry">
+     <rect>
+      <x>118</x>
+      <y>70</y>
+      <width>31</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="totalTime">
+    <property name="geometry">
+     <rect>
+      <x>264</x>
+      <y>70</y>
+      <width>30</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+   </widget>
+   <widget class="Phonon::SeekSlider" name="seekSlider">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -379,35 +405,6 @@
       <width>171</width>
       <height>19</height>
      </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="consumeTime">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>70</y>
-      <width>25</width>
-      <height>15</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>3:46</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="totalTime">
-    <property name="geometry">
-     <rect>
-      <x>270</x>
-      <y>70</y>
-      <width>25</width>
-      <height>15</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>4:03</string>
     </property>
    </widget>
   </widget>
@@ -468,36 +465,52 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QPushButton#btnShuffle {border:none;background: url(:/button/btnShuffle.jpg);}</string>
+     <string notr="true">QPushButton#btnShuffle {border:none;background: url(:/button/btnShuffle.jpg) no-repeat;}</string>
     </property>
     <property name="text">
      <string/>
     </property>
    </widget>
-   <widget class="QSlider" name="horizontalSlider_2">
+   <widget class="QPushButton" name="btnAdd">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>8</y>
-      <width>131</width>
-      <height>20</height>
+      <x>160</x>
+      <y>7</y>
+      <width>21</width>
+      <height>25</height>
      </rect>
     </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btnAdd {border:none;background: url(:/button/btnAdd.jpg) no-repeat;}</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QPushButton" name="btnDel">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>7</y>
+      <width>21</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#btnDel {border:none;background: url(:/button/btnDel.jpg) no-repeat;}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="Phonon::VolumeSlider" name="volumeSlider">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>8</y>
-      <width>31</width>
-      <height>20</height>
+      <y>10</y>
+      <width>141</width>
+      <height>22</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>音量</string>
     </property>
    </widget>
   </widget>
@@ -507,6 +520,18 @@
   <zorder>seperator1</zorder>
   <zorder>footer</zorder>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Phonon::SeekSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/seekslider.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Phonon::VolumeSlider</class>
+   <extends>QWidget</extends>
+   <header location="global">phonon/volumeslider.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../images/assets.qrc"/>
  </resources>
