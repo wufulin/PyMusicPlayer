@@ -6,7 +6,7 @@
 	Python 2.7.x
 
 #### Screenshot
-![MusicPlayer](https://github.com/wufulin/PyMusicPlayer/blob/master/src/images/MusicPlayer.PNG)
+![MusicPlayer](https://raw.github.com/wufulin/PyMusicPlayer/master/src/images/MusicPlayer.PNG)
 
 #### ToDo
 * 增加歌词显示功能
